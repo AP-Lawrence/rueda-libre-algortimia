@@ -148,3 +148,28 @@ También separé el proceso en dos rutas principales mediante anclajes lógicos:
 ### 5.2. Reconocimiento de patrones
 Consiste en identificar actividades o situaciones que se repiten dentro de un proceso. En este algoritmo, identifiqué que, independientemente de la condición del cliente, existen varias actividades comunes:
 * Se debe verificar la identidad del cliente.
+
+
+---
+
+## La primera cotización en PSeInT
+
+### Tabla entrada de datos, proceso y salida
+
+| Entrada | Proceso | Salida |
+| :--- | :--- | :--- |
+| **nombreCliente** (Caracter). | Leer el nombre del cliente. | Nombre del cliente. |
+| **precioHora** (Real). | Asignar el valor constante por hora. | Ninguna (uso interno). |
+| **horasAlquiler** (Real). | Leer la cantidad de horas alquiladas. | Cantidad de horas de alquiler. |
+| Ninguna (se calcula). | Calcular: `Horas-alquiler` × `Precio-hora`. | **valorTotal** (Real) a pagar. |
+
+### Tabla de pruebas del algoritmo: cotaización básica
+| Entrada | Resultado esperado | Resultado obtenido |
+| :--- | :--- | :--- |
+| **nombreCliente:**: Ana, **horasAlquiler:** 1 | 1 × $10.000 = $10.000 | $10.000 |
+| **nombreCliente:**: Carlos, **horasAlquiler:** 3 | 3 × $10.000 = $30.000 | $30.000 |
+| **nombreCliente:**: María, **horasAlquiler:** 8 | 8 × $10.000 = $80.000 | $80.000 |
+
+### Entradas negativas o cero
+- Si la persona de taquilla ingresa 0 o un número negativo en las horas de alquiler, el algoritmo realiza el cálculo y muestra un valor de $0 o un valor negativo. Estos resultados no son válidos, ya que no se puede alquilar una bicicleta durante 0 horas o una cantidad negativa de horas.
+
