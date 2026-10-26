@@ -173,3 +173,10 @@ Consiste en identificar actividades o situaciones que se repiten dentro de un pr
 ### Entradas negativas o cero
 - Si la persona de taquilla ingresa 0 o un número negativo en las horas de alquiler, el algoritmo realiza el cálculo y muestra un valor de $0 o un valor negativo. Estos resultados no son válidos, ya que no se puede alquilar una bicicleta durante 0 horas o una cantidad negativa de horas.
 
+--
+## Prueba de escritorio (Cotización recorrido)
+
+| Recorrido | Precio recorrido | Cantidad de personas | Valor total | Valor anticipo | Saldo pendiente |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Sabores de Barrio:** | 60.000 | 4 | 4 × $60.000 = $240.000 | $240.000 × (30%) = $72.000 | $240.000 - $72.000 = $168.00 |
+
