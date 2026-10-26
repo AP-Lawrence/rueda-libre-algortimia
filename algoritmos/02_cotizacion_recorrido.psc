@@ -3,7 +3,7 @@ Algoritmo cotizacion_recorrido
 	Definir i, cantidadPersonas Como Entero
 	Definir preciosPersona, valorTotal, anticipo, saldo Como Real
 	Dimensionar recorridos(3)
-	recorridos[1] <- 'Río y Parques'
+	recorridos[1] <- 'Rï¿½o y Parques'
 	recorridos[2] <- 'Sabores de Barrio'
 	recorridos[3] <- 'Reto Las Palmas '
 	Dimensionar preciosPersona(3)
@@ -15,14 +15,14 @@ Algoritmo cotizacion_recorrido
 		Escribir 'El Recorrido #', (i), ' es: ', recorridos[i], ' y tiene un valor de: $', preciosPersona[i]
 	FinPara
 	Escribir ''
-	Escribir 'Ingrese la cantidad de personas que harán el recorrido: '
+	Escribir 'Ingrese la cantidad de personas que harï¿½n el recorrido: '
 	Leer cantidadPersonas
 	Escribir ''
 	Repetir
 		Escribir 'Seleccione el recorrido usando (1, 2 o 3)'
 		Leer i
 		Si i<1 O i>3 Entonces
-			Escribir 'Opción invalidad, seleccion el recorridos usando (1, 2 o 3)'
+			Escribir 'Opciï¿½n invalidad, seleccion el recorridos usando (1, 2 o 3)'
 			Leer i
 		FinSi
 	Hasta Que i>=1 Y i<=3
@@ -34,3 +34,4 @@ Algoritmo cotizacion_recorrido
 	Escribir 'El anticipo es de: ', anticipo
 	Escribir 'El saldo es de: ', saldo
 FinAlgoritmo
+

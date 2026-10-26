@@ -173,10 +173,39 @@ Consiste en identificar actividades o situaciones que se repiten dentro de un pr
 ### Entradas negativas o cero
 - Si la persona de taquilla ingresa 0 o un número negativo en las horas de alquiler, el algoritmo realiza el cálculo y muestra un valor de $0 o un valor negativo. Estos resultados no son válidos, ya que no se puede alquilar una bicicleta durante 0 horas o una cantidad negativa de horas.
 
---
+---
 ## Prueba de escritorio (Cotización recorrido)
 
 | Recorrido | Precio recorrido | Cantidad de personas | Valor total | Valor anticipo | Saldo pendiente |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Sabores de Barrio:** | 60.000 | 4 | 4 × $60.000 = $240.000 | $240.000 × (30%) = $72.000 | $240.000 - $72.000 = $168.00 |
 
+---
+## Redondeo hacia arriba a centenas
+- Tomar el valor por ejemplo 90.750 y dividirlo entre 100: 907,5.
+- Sumar 99,9999 antes de dividir entre 100 para asegurar que los valores que no sean múltiplos de 100 suban a la siguiente centena.
+- Usar el método Trunc para eliminar los decimales y obtener el entero: 908.
+- Multiplicar por 100 para obtener el valor final redondeado hacia arriba: 90.800.
+
+### Tabla 1. Datos de entrada
+
+| Datos | Caso 1 | Caso 2 | Caso 3 |
+| :--- | :--- | :--- | :--- |
+| **Personas** | 3 | 4 | 5 |
+| **Bicicletas** | 3 | 3 | 2 |
+| **Horas de alquiler** | 2 | 3 | 4 |
+| **Recorrido** | Río y Parque | Sabores de Barrio | Reto Las Palmas |
+| **Aporte voluntario** | Sí (10 %) | Sí (10 %) | No (0 %) |
+
+### Tabla 2. Resultados de las pruebas
+
+| Concepto | Caso 1 | Caso 2 | Caso 3 |
+| :--- | :--- | :--- | :--- |
+| **Alquiler de bicicletas** | $60.000 | $90.000 | $80.000 |
+| **Costo del recorrido** | $135.000 | $240.000 | $400.000 |
+| **Subtotal** | $195.000 | $330.000 | $480.000 |
+| **Aporte voluntario** | $19.500 | $33.000 | $0 |
+| **Total de la cotización** | $214.500 | $363.000 | $480.000 |
+| **Valor por persona sin redondear** | $71.500 | $90.750 | $96.000 |
+| **Valor final por persona** | $71.500 | $90.800 | $96.000 |
+| **Resultado** | Correcto | Correcto | Correcto |
